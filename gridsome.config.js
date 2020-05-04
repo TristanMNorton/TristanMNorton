@@ -5,6 +5,17 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'Tristan M. Norton',
+  plugins: [
+    {
+      use: '@gridsome/source-contentful',
+      options: {
+        space: process.env.SPACE_ID, // required
+        accessToken: process.env.API_TOKEN, // required
+        host: 'cdn.contentful.com',
+        environment: 'master',
+        typeName: 'Contentful'
+      }
+    }
+  ]
 }
