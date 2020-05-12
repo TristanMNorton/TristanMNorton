@@ -4,8 +4,9 @@
       <h1>{{ $static.context.fullName }}</h1>
       <h2 class="subtitle">{{ $static.context.professionalTitle }}</h2>
     </header>
-    <navigation/>
+    <navigation />
     <slot/>
+    <Canvas />
   </div>
 </template>
 
@@ -20,10 +21,12 @@
 
 <script>
 import Navigation from '~/components/Navigation'
+import Canvas from '~/components/visual/Canvas'
 
 export default {
   components: {
-    Navigation
+    Navigation,
+    Canvas
   }
 }
 </script>
