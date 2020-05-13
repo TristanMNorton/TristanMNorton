@@ -1,9 +1,10 @@
 :root {
   --text-color: #F5F5F5;
-  --bg-color: #04080f;
+  --bg-color: #232b2b;
   --text-color-hover: #779696;
 
   --color-easing: color 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  --movement-easing: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 html {
