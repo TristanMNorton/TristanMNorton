@@ -38,13 +38,14 @@
 
   .cliff {
     position: fixed;
-    bottom: -12vh;
+    bottom: -31vh;
     left: -1rem;
     width: 150vw;
     min-width: 1500px;
     max-height: 100vh;
     max-width: 3040px;
     transition: transform 1000ms var(--movement-easing);
+    z-index: 2;
   }
   .layout.-frameOne .cliff {
     transform: translateX(0%);

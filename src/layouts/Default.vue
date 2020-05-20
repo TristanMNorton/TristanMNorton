@@ -1,12 +1,16 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <h1>{{ $static.context.fullName }}</h1>
-      <h2 class="subtitle">{{ $static.context.professionalTitle }}</h2>
-    </header>
-    <navigation />
-    <slot/>
-    <Canvas />
+    <aside class="layout__aside">
+      <header class="header">
+        <h1>{{ $static.context.fullName }}</h1>
+        <h2 class="subtitle">{{ $static.context.professionalTitle }}</h2>
+      </header>
+      <navigation />
+    </aside>
+    <main class="layout__main">
+      <slot/>
+      <Canvas />
+    </main>
   </div>
 </template>
 
@@ -31,5 +35,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  .layout {
+    display: flex;
+    flex-direction: row;
+
+    &__aside {
+      width: 300px;
+      padding: 2rem;
+      background-color: rgba(var(--bg-color-rgb), .8);
+      z-index: 2;
+    }
+
+    &__main {
+      flex-grow: 1;
+    }
+  }
 </style>

@@ -30,21 +30,25 @@
     max-width: 3850px;
     transition: transform 1000ms var(--movement-easing);
     transform: perspective(400px) rotateX(44deg) translate(1%);
-    z-index: 0;
+    z-index: 1;
     opacity: .4;
   }
 
   .layout.-frameOne .grid {
     transform: perspective(400px) rotateX(44deg) translate(1%);
+    left: -71rem;
   }
   .layout.-frameTwo .grid {
-    transform: perspective(400px) rotateX(44deg) translate(-3%);
+    transform: perspective(400px) rotateX(44deg) translate(-.25%);
+    left: -68rem;
   }
   .layout.-frameThree .grid {
-    transform: perspective(400px) rotateX(44deg) translate(-7%);
+    transform: perspective(400px) rotateX(44deg) translate(-1.5%);
+    left: -65rem;
   }
   .layout.-frameFour .grid {
-    transform: perspective(400px) rotateX(44deg) translate(-9%);
+    transform: perspective(400px) rotateX(44deg) translate(-2.75%);
+    left: -62rem;
   }
 
 </style>

@@ -19,6 +19,8 @@
 
 <style lang="scss">
   .navigation {
+    position: relative;
+    z-index: 2;
 
     &__list {
       padding-left: 0;
