@@ -1,7 +1,7 @@
 <template>
   <div class="cliff">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3987.66 1013.02"> 
-      <rect class="cls-1" x="1052.52" y="338.02" width="202" height="316" />
+      <rect class="cliff__shadow" x="1052.52" y="338.02" width="202" height="316" />
       <path class="cls-2"
               d="M1051,404.5c.21,2.57.41,6.89,1.62,9.1a28,28,0,0,1,1.5,3.31c.54,1.41,1.39,2.61,2,3.95a20.21,20.21,0,0,1,1.43,3.21,8.67,8.67,0,0,0,1.37,3.46c1.47,2,3.51,4.39,5.87,5.35a24.32,24.32,0,0,1,3,1.57,8.61,8.61,0,0,0,2.64.7c2.39.65,4.46,2.85,7,3,4.4.24,8.88,0,13.3,0h18c2.37,0,5.12-.35,7.43.11,2.65.54,5.2,1.11,7.88,1.55,2.91.48,6.4.72,9.06,2s5.23,1.22,7.89,2.2c1,.35,1.85.88,2.83,1.18s2,.34,2.94.72a56.28,56.28,0,0,1,15.69,9.32,35.36,35.36,0,0,1,6.41,6.93c1.54,2.46,2.89,5,4.57,7.39a23.11,23.11,0,0,1,3.15,6.35c.61,1.92,2.09,3.35,3,5.14a20.71,20.71,0,0,1,1.51,5.11" />
       <path class="cls-2"
@@ -18,16 +18,16 @@
 </template>
 
 <style lang="scss">
-  .cls-1 {
+  .cliff__shadow {
     stroke: #fff;
     stroke-width: 2px;
-    fill: var(--bg-color);
+    fill: #141717;
   }
 
   .cliff__surface {
     stroke: #fff;
     stroke-width: 2px;
-    fill: var(--bg-color);
+    fill: #1a2020;
   }
 
   .cls-2 {
@@ -54,14 +54,14 @@
   }
 
   .layout.-about .cliff {
-    transform: translateX(-12%);
+    transform: translateX(-7vw);
   }
 
   .layout.-work .cliff {
-    transform: translateX(-24%);
+    transform: translateX(-15vw);
   }
 
   .layout.-blog .cliff {
-    transform: translateX(-32%);
+    transform: translateX(-23vw);
   }
 </style>

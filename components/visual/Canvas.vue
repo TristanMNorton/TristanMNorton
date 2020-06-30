@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .canvas {
+    position: relative;
+    z-index: 1;
+  }
+</style>
