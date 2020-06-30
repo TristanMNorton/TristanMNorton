@@ -35,7 +35,7 @@
     width: 410vw;
     min-width: 100px;
     max-width: 3850px;
-    transition: transform 1000ms var(--movement-easing), opacity 1000ms var(--movement-easing);
+    transition: transform 2000ms var(--movement-easing), opacity 2000ms var(--movement-easing);
     transform: perspective(400px) rotateX(44deg) translate(1%);
     z-index: 1;
     opacity: 1;

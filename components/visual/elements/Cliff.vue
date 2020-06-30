@@ -72,7 +72,7 @@
     min-width: 1500px;
     max-height: 100vh;
     max-width: 3040px;
-    transition: transform 1000ms var(--movement-easing), bottom 1000ms var(--movement-easing);
+    transition: transform 2000ms var(--movement-easing), bottom 2000ms var(--movement-easing);
     z-index: 2;
   }
 

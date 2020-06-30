@@ -34,7 +34,7 @@ html::before {
   }
 
   to {
-    filter: contrast(1.5);
+    filter: contrast(1.75);
     transform: scale(1.01) translateY(-50%);
   }
 }
@@ -52,7 +52,7 @@ html::after {
   left: 0;
   width: 100vw;
   height: 100vw;
-  opacity: 0.75;
+  opacity: 0.85;
   transform: translateY(-50%);
   background-image: radial-gradient(#c1dcdc 15%, #677f7f 15% 40%, #506262 40% 50%, #394646 50% 55%, #171b1b  55% 57.5%);
 }
