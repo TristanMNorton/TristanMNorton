@@ -27,8 +27,25 @@ html::before {
   background-image: linear-gradient(to bottom, #222a2a 50%, #394646 50% 75%, #506262 75% 87.5%, #677f7f 87.5% 93.75%, #809898 93.75% 96.25%);
 }
 
+@keyframes glow {
+  from {
+    filter: contrast(1);
+    transform: scale(1) translateY(-50%);
+  }
+
+  to {
+    filter: contrast(1.01);
+    transform: scale(1.005) translateY(-50%);
+  }
+}
+
 html::after {
   content: '';
+  animation-name: glow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
   display: block;
   position: absolute;
   top: 63vh;

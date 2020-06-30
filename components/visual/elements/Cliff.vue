@@ -18,6 +18,16 @@
 </template>
 
 <style lang="scss">
+  @keyframes shadow {
+    from {
+      fill: #1a2020;
+    }
+
+    to {
+      fill: #151919;
+    }
+  }
+
   .cliff__shadow {
     stroke: #fff;
     stroke-width: 2px;
@@ -27,7 +37,11 @@
   .cliff__surface {
     stroke: #fff;
     stroke-width: 2px;
-    fill: #1a2020;
+    animation-name: shadow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
   }
 
   .cls-2 {
