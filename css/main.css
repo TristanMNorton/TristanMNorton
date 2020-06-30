@@ -34,15 +34,15 @@ html::before {
   }
 
   to {
-    filter: contrast(1.01);
-    transform: scale(1.005) translateY(-50%);
+    filter: contrast(1.5);
+    transform: scale(1.01) translateY(-50%);
   }
 }
 
 html::after {
   content: '';
   animation-name: glow;
-  animation-duration: 3s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
@@ -54,7 +54,7 @@ html::after {
   height: 100vw;
   opacity: 0.75;
   transform: translateY(-50%);
-  background-image: radial-gradient(#c1dcdc 25%, #677f7f 25% 40%, #506262 40% 50%, #394646 50% 55%, #222a2a  55% 57.5%);
+  background-image: radial-gradient(#c1dcdc 15%, #677f7f 15% 40%, #506262 40% 50%, #394646 50% 55%, #171b1b  55% 57.5%);
 }
 
 body {

@@ -24,21 +24,35 @@
     }
 
     to {
-      fill: #151919;
+      fill: #0a0c0c;
+    }
+  }
+
+  @keyframes darkShadow {
+    from {
+      fill: #000;
+    }
+
+    to {
+      fill: #141717;
     }
   }
 
   .cliff__shadow {
     stroke: #fff;
     stroke-width: 2px;
-    fill: #141717;
+    animation-name: darkShadow;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
   }
 
   .cliff__surface {
     stroke: #fff;
     stroke-width: 2px;
     animation-name: shadow;
-    animation-duration: 3s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);

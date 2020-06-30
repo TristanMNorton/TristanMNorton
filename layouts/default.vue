@@ -56,6 +56,10 @@ export default {
       max-width: 1000px;
       z-index: 2;
     }
+
+    &.-index .layout__main {
+      display: none;
+    }
   }
 
   .subtitle {
