@@ -39,7 +39,9 @@ export default {
   */
   plugins: [
     '~/plugins/contentful',
-    '~/plugins/primaryinformation'
+    '~/plugins/primaryinformation',
+    '~/plugins/skillgroups'
+
   ],
   /*
   ** Auto import components

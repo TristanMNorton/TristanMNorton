@@ -1,5 +1,8 @@
 <template>
-  <div class="layout" :class="`-${pathName}`">
+  <div
+    class="layout"
+    :class="`-${pathName}`"
+  >
     <aside class="layout__aside">
       <Header />
       <Navigation />
@@ -17,6 +20,7 @@ import Header from '~/components/global/Header'
 import Canvas from '~/components/visual/Canvas'
 
 export default {
+
   components: {
     Navigation,
     Canvas,
@@ -28,6 +32,7 @@ export default {
       return this.$route.name
     }
   }
+
 }
 </script>
 
@@ -59,6 +64,24 @@ export default {
 
     &.-index .layout__main {
       display: none;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--bg-color);
+      opacity: 0;
+      transition: opacity 2000ms cubic-bezier(0.33, 1, 0.68, 1);
+      z-index: 1;
+    }
+
+    &:not(.-index)::after {
+      opacity: 0.6;
     }
   }
 
