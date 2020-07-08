@@ -40,8 +40,8 @@ export default {
   plugins: [
     '~/plugins/contentful',
     '~/plugins/primaryinformation',
-    '~/plugins/skillgroups'
-
+    '~/plugins/skillgroups',
+    '~/plugins/brochuresites'
   ],
   /*
   ** Auto import components

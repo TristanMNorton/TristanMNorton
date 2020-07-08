@@ -24,6 +24,7 @@ html::before {
   left: 0;
   width: 100%;
   height: 50vh;
+  filter: blur(1px);
   background-image: linear-gradient(to bottom, #222a2a 50%, #394646 50% 75%, #506262 75% 87.5%, #677f7f 87.5% 93.75%, #809898 93.75% 96.25%);
 }
 
@@ -54,6 +55,8 @@ html::after {
   height: 100vw;
   opacity: 0.85;
   transform: translateY(-50%);
+  z-index: 0;
+  filter: blur(30px);
   background-image: radial-gradient(#c1dcdc 15%, #677f7f 15% 40%, #506262 40% 50%, #394646 50% 55%, #171b1b  55% 57.5%);
 }
 
@@ -72,7 +75,7 @@ h2 {
 
 .canvas {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 a {

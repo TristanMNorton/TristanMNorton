@@ -75,13 +75,15 @@ export default {
       bottom: 0;
       left: 0;
       background-color: var(--bg-color);
-      opacity: 0;
-      transition: opacity 2000ms cubic-bezier(0.33, 1, 0.68, 1);
+      opacity: 00;
+      transition: opacity 4000ms cubic-bezier(0.33, 1, 0.68, 1), backdrop-filter 6000ms cubic-bezier(0.33, 1, 0.68, 1);
       z-index: 1;
+      backdrop-filter: blur(0);
     }
 
     &:not(.-index)::after {
-      opacity: 0.6;
+      opacity: 0.8;
+      backdrop-filter: blur(25px) hue-rotate(90deg);
     }
   }
 

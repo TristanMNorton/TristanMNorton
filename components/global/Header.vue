@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <h1 class="header__title">
-      {{ primaryInformation.fullName }}
+      <nuxt-link to="/">
+        {{ primaryInformation.fullName }}
+      </nuxt-link>
     </h1>
     <h2 class="header__subtitle">
       {{ primaryInformation.professionalTitle }}

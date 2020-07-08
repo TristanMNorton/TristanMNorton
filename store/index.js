@@ -2,7 +2,8 @@ import client from '~/plugins/contentful'
 
 export const state = () => ({
   primaryInformation: null,
-  skillGroupsRaw: null
+  skillGroupsRaw: null,
+  brochureSitesRaw: null
 })
 
 export const mutations = {
@@ -13,6 +14,10 @@ export const mutations = {
 
   updateSkillGroups: (state, skillGroups) => {
     state.skillGroupsRaw = skillGroups
+  },
+
+  updateBrochureSites: (state, brochureSites) => {
+    state.brochureSitesRaw = brochureSites
   }
 
 }
@@ -47,17 +52,52 @@ export const actions = {
     } catch (err) {
       throw new Error(err)
     }
+  },
+
+  async getBrochureSites ({ commit }) {
+    try {
+      if (!client) { return }
+
+      const { items } = await client.getEntries({
+        content_type: 'brochureSites'
+      })
+
+      commit('updateBrochureSites', items)
+    } catch (err) {
+      throw new Error(err)
+    }
   }
 
 }
 
 export const getters = {
 
-  skillGroups: (state) => {
-    return state.skillGroupsRaw.map((skillGroup) => {
+  skillGroups: state => {
+    return state.skillGroupsRaw.map(skillGroup => {
       return {
         ...skillGroup.fields,
         id: skillGroup.sys.id
+      }
+    })
+  },
+
+  brochureSites: state => {
+    return state.brochureSitesRaw.map(brochureSite => {
+      const {
+        siteName: name,
+        siteUrl: url,
+        siteDescription: description
+      } = brochureSite.fields
+
+      const thumbnail = brochureSite.fields.siteThumbnail.fields.file
+      const { id } = brochureSite.sys
+
+      return {
+        name,
+        url,
+        description,
+        thumbnail,
+        id
       }
     })
   }
