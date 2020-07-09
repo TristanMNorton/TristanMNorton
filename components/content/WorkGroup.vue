@@ -8,13 +8,24 @@
         {{ groupIntro }}
       </p>
     </header>
+    <section class="workGroup__samples">
+      <WorkSample
+        v-for="sample in workSamples"
+        :key="sample.id"
+        :work-sample="sample"
+      />
+    </section>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import WorkSample from './WorkSample'
 
 export default {
+
+  components: {
+    WorkSample
+  },
 
   props: {
     groupTitle: {
@@ -29,12 +40,14 @@ export default {
 
     portfolioGroup: {
       type: String,
-      required: true
+      default: ''
     }
   },
 
   computed: {
-    ...mapGetters([this.portfolioGroup])
+    workSamples () {
+      return this.$store.getters[this.portfolioGroup]
+    }
   }
 
 }

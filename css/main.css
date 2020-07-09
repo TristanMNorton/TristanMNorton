@@ -11,9 +11,12 @@ html {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   font-size: 10px;
-  position: relative;
   background-color: #b9c6c6;
-  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 html::before {
@@ -64,7 +67,12 @@ body {
   font-size: 18px;
   color: var(--text-color);
   padding: 8rem;
-  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 h1,

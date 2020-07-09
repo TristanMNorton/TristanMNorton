@@ -8,7 +8,9 @@
       <Navigation />
     </aside>
     <main class="layout__main">
-      <Nuxt />
+      <div class="layout__mainWrapper">
+        <Nuxt />
+      </div>
     </main>
     <Canvas />
   </div>
@@ -60,6 +62,20 @@ export default {
       flex-grow: 1;
       max-width: 1000px;
       z-index: 2;
+      position: relative;
+      height: calc(100vh - 26rem);
+      overflow: hidden;
+    }
+
+    &__mainWrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: -17px;
+      bottom: 0;
+      padding: 4rem;
+      padding-right: calc(4rem + 17px);
+      overflow-y: scroll;
     }
 
     &.-index .layout__main {
