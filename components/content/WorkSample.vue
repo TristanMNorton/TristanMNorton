@@ -8,9 +8,9 @@
       :alt="name"
       class="workSample__thumbnail"
     >
-    <nuxt-link :to="url">
+    <a :href="url">
       View Website
-    </nuxt-link>
+    </a>
   </div>
 </template>
 
@@ -26,15 +26,15 @@ export default {
 
   computed: {
     name () {
-      return this ? this.workSample.name : ''
+      return this.workSample.name
     },
 
     url () {
-      return this ? this.workSample.url : ''
+      return this.workSample.url
     },
 
     src () {
-      return this ? this.workSample.thumbnail.url : ''
+      return this.workSample.thumbnail.url
     }
   }
 
